@@ -1,0 +1,151 @@
+* {
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Kumbh Sans', sans-serif;
+    font-size: 13px;
+    background: linear-gradient(180deg, #B068E9 0%, #6463E7 100%);
+    margin: 0px;
+    padding: 0px;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+}
+
+.wrapper {
+    width:327px;
+    height:643px;
+    background: linear-gradient(180deg, #B068E9 0%, #6463E7 100%);
+    margin-bottom: 200px;
+    
+    }
+
+.content-container {
+    background-color: white;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding:132px 24px 48px 24px;
+    width: 327px;
+    Height: 535px;
+    box-shadow: 0px 50px 50px -20px rgba(53, 18, 122, 0.497159);
+}
+
+.qa-container {
+    width :279px;
+    height :355px;
+    display: grid;
+    grid-template-columns:minmax(min-content,256px) 10px; 
+}
+ 
+h1 {
+    font-weight: 700;
+    font-size: 32px;
+} 
+    
+.hr {
+    grid-column: 1/-1;
+    background-color: red;
+    height: 0px ;
+    border:none; 
+    margin: 0px;     
+}
+
+img, .question {
+    align-self: center;
+}
+
+.answer {
+    height: 0px;
+    overflow-y: hidden;
+    transition: 0.6s all ease; 
+    margin-bottom: 0px;  
+    margin-top: 0px;  
+}
+
+.show-answer {
+   height: 70px;
+}
+
+.destroy-answer{
+    display: none;
+}
+
+.chosen-question {
+    font-weight: 700;
+    color:#1E1F36;
+}
+
+.invert-arrow {
+    transform: rotate(180deg);
+}
+
+.main-image-box {
+    width: 237px;
+    height: 180px;
+    margin: 0 auto;
+}
+
+.main-image {
+    position:relative;
+    top:70px;
+}
+
+.big-main-image-box {
+    display: none;
+}
+
+@media only screen and (min-width: 768px) {
+    
+    .wrapper {
+        width:920px;
+        height:509px;
+        background: linear-gradient(180deg, #B068E9 0%, #6463E7 100%);
+        margin-bottom: 0px;
+        border:red solid 2px;
+        display: flex;
+        overflow: hidden;
+        
+        
+        
+        }
+    
+    .content-container {
+        width:920px;
+        height:509px;
+        background-color: white;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        padding:132px 24px 48px 24px;
+     
+        box-shadow: 0px 50px 50px -20px rgba(53, 18, 122, 0.497159);
+    }
+    
+    .qa-container {
+        width :279px;
+        height :50px;
+        display: grid;
+        grid-template-columns:minmax(min-content,256px) 10px;
+        /* border: red solid 2px;  */
+    }
+
+    .main-image-box {
+        display: none;
+    }
+
+    .big-main-image-box {
+        display: block;
+       position: absolute;
+       right:40px;
+        
+    }
+     
+  
+
+}
