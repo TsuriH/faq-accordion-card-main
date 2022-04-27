@@ -5,16 +5,22 @@ const elements = document.getElementsByClassName('answer')
 
 function showContent(img) {
 
-    for(element of elements) {
-       /*  element.classList.remove('show-answer') why it doesnt work
-        element.classList.remove('chosen-question')
-        element.classList.remove('invert-arrow')*/ 
+    for (element of elements) {
+        
+        if (img.id.charAt(5) != element.id.charAt(6)) {
+            
+            element.classList.remove('show-answer')
+        } 
+
     }
 
-    document.getElementsByClassName('answer')
+
+
+
+   
 
     let arrowNumber = img.id
-    switch (arrowNumber){
+    switch (arrowNumber) {
         case 'arrow1':
             document.getElementById('answer1').classList.toggle('show-answer');
             document.getElementById('question1').classList.toggle('chosen-question');
@@ -34,12 +40,12 @@ function showContent(img) {
             document.getElementById('answer4').classList.toggle('show-answer');
             document.getElementById('question4').classList.toggle('chosen-question');
             document.getElementById('arrow4').classList.toggle('invert-arrow');
-            break;   
+            break;
         case 'arrow5':
             document.getElementById('answer5').classList.toggle('show-answer');
             document.getElementById('question5').classList.toggle('chosen-question');
             document.getElementById('arrow5').classList.toggle('invert-arrow');
-            break;   
+            break;
 
     }
 }
